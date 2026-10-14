@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Campus 360 Tour</title>
+  <title>Nucifera Cafe Virtual Tour</title>
   <!-- Pannellum loads from the CDN; an internet connection is required. -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.css">
   <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.js"></script>
@@ -20,10 +20,10 @@
 </head>
 <body>
   <header>
-    <h1>Campus 360 | Interactive Virtual Tour</h1>
+    <h1>Nucifera Cafe | Interactive Virtual Tour</h1>
     <p class="intro">Drag to look around. Click arrows to change locations; click info icons for explanations.</p>
   </header>
-  <main><div id="panorama" aria-label="Interactive 360-degree campus tour"></div></main>
+  <main><div id="panorama" aria-label="Interactive 360-degree tour"></div></main>
   <footer>Built with <span>Pannellum</span>, <span>Git</span> and <span>GitHub Pages</span>.</footer>
 
   <script>
@@ -37,35 +37,45 @@
       },
       "scenes": {
         "entrance": {
-          "title": "Campus Entrance",
+          "title": "Entrance",
           "type": "equirectangular",
           "panorama": "images/entrance.jpg",
           "yaw": 0,
           "hotSpots": [
-            {"pitch": -5, "yaw": 14, "type": "scene", "text": "Go to Classroom", "sceneId": "classroom"},
-            {"pitch": 10, "yaw": -50, "type": "info", "text": "Welcome to our virtual campus tour!"}
+            {"pitch": 0, "yaw": 0, "type": "scene", "text": "Masuk ke Lantai 1", "sceneId": "lantai_1"},
+            {"pitch": 10, "yaw": -30, "type": "info", "text": "Selamat datang di Nucifera Cafe!"}
           ]
         },
-        "classroom": {
-          "title": "Classroom",
+        "lantai_1": {
+          "title": "Lantai 1",
           "type": "equirectangular",
-          "panorama": "images/classroom.jpg",
+          "panorama": "images/Lantai_1.jpg",
           "yaw": 0,
           "hotSpots": [
-            {"pitch": -6, "yaw": 30, "type": "scene", "text": "Go to Library", "sceneId": "library"},
-            {"pitch": -6, "yaw": -110, "type": "scene", "text": "Back to Entrance", "sceneId": "entrance"},
-            {"pitch": 8, "yaw": 3, "type": "info", "text": "Students learn and work together here."}
+            {"pitch": 0, "yaw": 0, "type": "scene", "text": "Naik ke Lantai 2", "sceneId": "lantai_2"},
+            {"pitch": -6, "yaw": -110, "type": "scene", "text": "Kembali ke Entrance", "sceneId": "entrance"},
+            {"pitch": 10, "yaw": -50, "type": "info", "text": "Area kasir dan pemesanan Lantai 1."}
           ]
         },
-        "library": {
-          "title": "Library",
+        "lantai_2": {
+          "title": "Lantai 2",
           "type": "equirectangular",
-          "panorama": "images/library.jpg",
+          "panorama": "images/Lantai_2.jpg",
           "yaw": 0,
           "hotSpots": [
-            {"pitch": -7, "yaw": -36, "type": "scene", "text": "Back to Classroom", "sceneId": "classroom"},
-            {"pitch": -7, "yaw": 100, "type": "scene", "text": "Return to Entrance", "sceneId": "entrance"},
-            {"pitch": 9, "yaw": 5, "type": "info", "text": "Study resources and reading spaces."}
+            {"pitch": 0, "yaw": 0, "type": "scene", "text": "Naik ke Lantai 3", "sceneId": "lantai_3"},
+            {"pitch": -6, "yaw": -110, "type": "scene", "text": "Kembali ke Lantai 1", "sceneId": "lantai_1"},
+            {"pitch": 8, "yaw": 3, "type": "info", "text": "Spot duduk indoor yang nyaman."}
+          ]
+        },
+        "lantai_3": {
+          "title": "Lantai 3",
+          "type": "equirectangular",
+          "panorama": "images/Lantai_3.jpg",
+          "yaw": 0,
+          "hotSpots": [
+            {"pitch": -7, "yaw": 100, "type": "scene", "text": "Kembali ke Lantai 2", "sceneId": "lantai_2"},
+            {"pitch": 9, "yaw": 5, "type": "info", "text": "Spot Outdoor dengan pemandangan bagus."}
           ]
         }
       }
