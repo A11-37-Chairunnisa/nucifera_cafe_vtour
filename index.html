@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nucifera Cafe Virtual Tour</title>
+  <title>Nucifera Cafe | Interactive Virtual Tour</title>
   <!-- Pannellum loads from the CDN; an internet connection is required. -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.css">
   <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.js"></script>
@@ -29,32 +29,21 @@
   <script>
     pannellum.viewer("panorama", {
       "default": {
-        "firstScene": "entrance",
+        "firstScene": "lantai_1",
         "sceneFadeDuration": 700,
         "autoLoad": true,
         "hfov": 110,
         "escapeHTML": true
       },
       "scenes": {
-        "entrance": {
-          "title": "Entrance",
-          "type": "equirectangular",
-          "panorama": "images/entrance.jpg",
-          "yaw": 0,
-          "hotSpots": [
-            {"pitch": 0, "yaw": 0, "type": "scene", "text": "Masuk ke Lantai 1", "sceneId": "lantai_1"},
-            {"pitch": 10, "yaw": -30, "type": "info", "text": "Selamat datang di Nucifera Cafe!"}
-          ]
-        },
         "lantai_1": {
-          "title": "Lantai 1",
+          "title": "Lantai 1 (Entrance)",
           "type": "equirectangular",
-          "panorama": "images/entrance_1.jpg",
+          "panorama": "images/Lantai_1.jpg",
           "yaw": 0,
           "hotSpots": [
             {"pitch": 0, "yaw": 0, "type": "scene", "text": "Naik ke Lantai 2", "sceneId": "lantai_2"},
-            {"pitch": -6, "yaw": -110, "type": "scene", "text": "Kembali ke Entrance", "sceneId": "entrance"},
-            {"pitch": 10, "yaw": -50, "type": "info", "text": "Area kasir dan pemesanan Lantai 1."}
+            {"pitch": 10, "yaw": -50, "type": "info", "text": "Selamat datang di Nucifera Cafe - Lantai 1!"}
           ]
         },
         "lantai_2": {
@@ -65,7 +54,7 @@
           "hotSpots": [
             {"pitch": 0, "yaw": 0, "type": "scene", "text": "Naik ke Lantai 3", "sceneId": "lantai_3"},
             {"pitch": -6, "yaw": -110, "type": "scene", "text": "Kembali ke Lantai 1", "sceneId": "lantai_1"},
-            {"pitch": 8, "yaw": 3, "type": "info", "text": "Spot duduk indoor yang nyaman."}
+            {"pitch": 8, "yaw": 3, "type": "info", "text": "Spot duduk indoor Lantai 2."}
           ]
         },
         "lantai_3": {
@@ -75,7 +64,7 @@
           "yaw": 0,
           "hotSpots": [
             {"pitch": -7, "yaw": 100, "type": "scene", "text": "Kembali ke Lantai 2", "sceneId": "lantai_2"},
-            {"pitch": 9, "yaw": 5, "type": "info", "text": "Spot Outdoor dengan pemandangan bagus."}
+            {"pitch": 9, "yaw": 5, "type": "info", "text": "Spot Outdoor Lantai 3."}
           ]
         }
       }
